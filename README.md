@@ -1,1 +1,1 @@
-Code
+Aim of the thesis is to focus on the basic background on computer networking (e.g., IP addressing and routing) and develop an automatic generator of problems for the students, to be integrated in Politecnico Moodle platform (https://moodle.org/). A possible option could be to integrate Moodle with Kathara labs (https://www.kathara.org/).
