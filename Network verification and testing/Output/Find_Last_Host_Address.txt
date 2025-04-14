@@ -1,0 +1,900 @@
+::Find Last Host Address Q1::
+An IP address 77.249.30.140 (01001101.11111001.00011110.10001100) has a subnet mask of /20. Which of the following is the LAST host address for this IP?
+{
+~77.249.127.254/20
+=77.249.31.254/20
+~77.251.255.254/20
+~77.249.255.254/20
+}
+
+::Find Last Host Address Q2::
+An IP address 202.173.62.2 (11001010.10101101.00111110.00000010) has a subnet mask of /12. Which of the following is the LAST host address for this IP?
+{
+~202.191.255.254/12
+=202.175.255.254/12
+~202.255.255.254/12
+~74.175.255.254/12
+}
+
+::Find Last Host Address Q3::
+An IP address 23.92.220.156 (00010111.01011100.11011100.10011100) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+~21.124.220.254/25
+~23.92.223.254/25
+=23.92.220.254/25
+~23.92.221.254/25
+}
+
+::Find Last Host Address Q4::
+An IP address 54.59.23.135 (00110110.00111011.00010111.10000111) has a subnet mask of /22. Which of the following is the LAST host address for this IP?
+{
+~54.59.31.254/22
+~54.59.63.254/22
+~54.59.127.254/22
+=54.59.23.254/22
+}
+
+::Find Last Host Address Q5::
+An IP address 53.156.174.154 (00110101.10011100.10101110.10011010) has a subnet mask of /23. Which of the following is the LAST host address for this IP?
+{
+~53.156.255.254/23
+=53.156.175.254/23
+~53.156.191.254/23
+~117.28.175.254/23
+}
+
+::Find Last Host Address Q6::
+An IP address 97.165.134.232 (01100001.10100101.10000110.11101000) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+~97.165.159.254/25
+=97.165.134.254/25
+~97.165.135.254/25
+~97.165.143.254/25
+}
+
+::Find Last Host Address Q7::
+An IP address 175.55.220.86 (10101111.00110111.11011100.01010110) has a subnet mask of /10. Which of the following is the LAST host address for this IP?
+{
+=175.63.255.254/10
+~175.127.255.254/10
+~46.63.255.254/10
+~175.255.255.254/10
+}
+
+::Find Last Host Address Q8::
+An IP address 183.10.158.146 (10110111.00001010.10011110.10010010) has a subnet mask of /12. Which of the following is the LAST host address for this IP?
+{
+~183.31.255.254/12
+~183.63.255.254/12
+=183.15.255.254/12
+~183.127.255.254/12
+}
+
+::Find Last Host Address Q9::
+An IP address 24.54.121.136 (00011000.00110110.01111001.10001000) has a subnet mask of /10. Which of the following is the LAST host address for this IP?
+{
+~24.255.255.254/10
+=24.63.255.254/10
+~24.127.255.254/10
+~28.63.255.254/10
+}
+
+::Find Last Host Address Q10::
+An IP address 209.208.82.185 (11010001.11010000.01010010.10111001) has a subnet mask of /9. Which of the following is the LAST host address for this IP?
+{
+~80.255.255.254/9
+~217.255.255.254/9
+=209.255.255.254/9
+~213.255.255.254/9
+}
+
+::Find Last Host Address Q11::
+An IP address 68.218.132.12 (01000100.11011010.10000100.00001100) has a subnet mask of /23. Which of the following is the LAST host address for this IP?
+{
+~68.218.191.254/23
+~68.218.135.254/23
+=68.218.133.254/23
+~68.218.159.254/23
+}
+
+::Find Last Host Address Q12::
+An IP address 95.125.154.26 (01011111.01111101.10011010.00011010) has a subnet mask of /21. Which of the following is the LAST host address for this IP?
+{
+~95.125.255.254/21
+~95.109.159.254/21
+~95.125.191.254/21
+=95.125.159.254/21
+}
+
+::Find Last Host Address Q13::
+An IP address 4.64.193.94 (00000100.01000000.11000001.01011110) has a subnet mask of /9. Which of the following is the LAST host address for this IP?
+{
+~4.255.255.254/9
+~12.127.255.254/9
+~44.127.255.254/9
+=4.127.255.254/9
+}
+
+::Find Last Host Address Q14::
+An IP address 170.146.253.167 (10101010.10010010.11111101.10100111) has a subnet mask of /16. Which of the following is the LAST host address for this IP?
+{
+~170.191.255.254/16
+~170.147.255.254/16
+~170.159.255.254/16
+=170.146.255.254/16
+}
+
+::Find Last Host Address Q15::
+An IP address 4.181.152.121 (00000100.10110101.10011000.01111001) has a subnet mask of /24. Which of the following is the LAST host address for this IP?
+{
+~4.181.155.254/24
+=4.181.152.254/24
+~4.181.191.254/24
+~4.181.159.254/24
+}
+
+::Find Last Host Address Q16::
+An IP address 78.157.190.130 (01001110.10011101.10111110.10000010) has a subnet mask of /16. Which of the following is the LAST host address for this IP?
+{
+=78.157.255.254/16
+~78.159.255.254/16
+~78.191.255.254/16
+~78.21.255.254/16
+}
+
+::Find Last Host Address Q17::
+An IP address 96.230.101.23 (01100000.11100110.01100101.00010111) has a subnet mask of /17. Which of the following is the LAST host address for this IP?
+{
+~96.231.255.254/17
+~96.255.255.254/17
+~96.239.255.254/17
+=96.230.127.254/17
+}
+
+::Find Last Host Address Q18::
+An IP address 46.106.179.250 (00101110.01101010.10110011.11111010) has a subnet mask of /19. Which of the following is the LAST host address for this IP?
+{
+~46.111.255.254/19
+~46.106.255.254/19
+~46.107.255.254/19
+=46.106.191.254/19
+}
+
+::Find Last Host Address Q19::
+An IP address 157.203.164.114 (10011101.11001011.10100100.01110010) has a subnet mask of /24. Which of the following is the LAST host address for this IP?
+{
+~157.203.191.254/24
+~157.203.175.254/24
+=157.203.164.254/24
+~157.203.165.254/24
+}
+
+::Find Last Host Address Q20::
+An IP address 8.141.247.23 (00001000.10001101.11110111.00010111) has a subnet mask of /19. Which of the following is the LAST host address for this IP?
+{
+~8.143.255.254/19
+~0.141.255.254/19
+=8.141.255.254/19
+~72.141.255.254/19
+}
+
+::Find Last Host Address Q21::
+An IP address 202.35.81.75 (11001010.00100011.01010001.01001011) has a subnet mask of /28. Which of the following is the LAST host address for this IP?
+{
+=202.35.81.78/28
+~202.35.83.254/28
+~202.35.81.94/28
+~202.35.81.126/28
+}
+
+::Find Last Host Address Q22::
+An IP address 50.111.174.81 (00110010.01101111.10101110.01010001) has a subnet mask of /8. Which of the following is the LAST host address for this IP?
+{
+=50.255.255.254/8
+~122.255.255.254/8
+~54.255.255.254/8
+~115.255.255.254/8
+}
+
+::Find Last Host Address Q23::
+An IP address 114.96.116.16 (01110010.01100000.01110100.00010000) has a subnet mask of /23. Which of the following is the LAST host address for this IP?
+{
+~118.96.117.254/23
+~114.96.119.254/23
+~114.96.127.254/23
+=114.96.117.254/23
+}
+
+::Find Last Host Address Q24::
+An IP address 66.55.84.20 (01000010.00110111.01010100.00010100) has a subnet mask of /16. Which of the following is the LAST host address for this IP?
+{
+~74.54.255.254/16
+=66.55.255.254/16
+~66.63.255.254/16
+~66.59.255.254/16
+}
+
+::Find Last Host Address Q25::
+An IP address 158.191.208.238 (10011110.10111111.11010000.11101110) has a subnet mask of /8. Which of the following is the LAST host address for this IP?
+{
+~14.255.255.254/8
+~156.255.255.254/8
+~190.255.255.254/8
+=158.255.255.254/8
+}
+
+::Find Last Host Address Q26::
+An IP address 189.179.209.123 (10111101.10110011.11010001.01111011) has a subnet mask of /22. Which of the following is the LAST host address for this IP?
+{
+=189.179.211.254/22
+~189.179.255.254/22
+~189.179.223.254/22
+~189.179.215.254/22
+}
+
+::Find Last Host Address Q27::
+An IP address 8.229.211.174 (00001000.11100101.11010011.10101110) has a subnet mask of /26. Which of the following is the LAST host address for this IP?
+{
+=8.229.211.190/26
+~8.229.215.254/26
+~8.229.211.254/26
+~8.229.223.254/26
+}
+
+::Find Last Host Address Q28::
+An IP address 124.222.81.40 (01111100.11011110.01010001.00101000) has a subnet mask of /8. Which of the following is the LAST host address for this IP?
+{
+~92.255.255.254/8
+=124.255.255.254/8
+~254.255.255.254/8
+~112.255.255.254/8
+}
+
+::Find Last Host Address Q29::
+An IP address 12.81.43.105 (00001100.01010001.00101011.01101001) has a subnet mask of /20. Which of the following is the LAST host address for this IP?
+{
+=12.81.47.254/20
+~12.81.127.254/20
+~12.83.255.254/20
+~12.81.63.254/20
+}
+
+::Find Last Host Address Q30::
+An IP address 198.69.107.142 (11000110.01000101.01101011.10001110) has a subnet mask of /16. Which of the following is the LAST host address for this IP?
+{
+~198.79.255.254/16
+~198.127.255.254/16
+=198.69.255.254/16
+~198.71.255.254/16
+}
+
+::Find Last Host Address Q31::
+An IP address 46.19.209.187 (00101110.00010011.11010001.10111011) has a subnet mask of /24. Which of the following is the LAST host address for this IP?
+{
+~46.19.223.254/24
+~46.19.215.254/24
+~46.19.211.254/24
+=46.19.209.254/24
+}
+
+::Find Last Host Address Q32::
+An IP address 51.12.45.77 (00110011.00001100.00101101.01001101) has a subnet mask of /14. Which of the following is the LAST host address for this IP?
+{
+~51.31.255.254/14
+=51.15.255.254/14
+~51.127.255.254/14
+~51.63.255.254/14
+}
+
+::Find Last Host Address Q33::
+An IP address 48.95.75.221 (00110000.01011111.01001011.11011101) has a subnet mask of /15. Which of the following is the LAST host address for this IP?
+{
+=48.95.255.254/15
+~50.95.255.254/15
+~48.127.255.254/15
+~48.31.255.254/15
+}
+
+::Find Last Host Address Q34::
+An IP address 79.20.94.62 (01001111.00010100.01011110.00111110) has a subnet mask of /16. Which of the following is the LAST host address for this IP?
+{
+~79.23.255.254/16
+~79.31.255.254/16
+~79.21.255.254/16
+=79.20.255.254/16
+}
+
+::Find Last Host Address Q35::
+An IP address 43.136.109.193 (00101011.10001000.01101101.11000001) has a subnet mask of /19. Which of the following is the LAST host address for this IP?
+{
+=43.136.127.254/19
+~43.136.255.254/19
+~43.143.255.254/19
+~43.137.255.254/19
+}
+
+::Find Last Host Address Q36::
+An IP address 67.67.65.28 (01000011.01000011.01000001.00011100) has a subnet mask of /20. Which of the following is the LAST host address for this IP?
+{
+~67.67.95.254/20
+=67.67.79.254/20
+~67.67.127.254/20
+~67.67.255.254/20
+}
+
+::Find Last Host Address Q37::
+An IP address 4.251.77.74 (00000100.11111011.01001101.01001010) has a subnet mask of /22. Which of the following is the LAST host address for this IP?
+{
+~4.251.127.254/22
+~4.251.95.254/22
+=4.251.79.254/22
+~4.251.255.254/22
+}
+
+::Find Last Host Address Q38::
+An IP address 185.144.19.48 (10111001.10010000.00010011.00110000) has a subnet mask of /11. Which of the following is the LAST host address for this IP?
+{
+~241.159.255.254/11
+=185.159.255.254/11
+~185.255.255.254/11
+~185.191.255.254/11
+}
+
+::Find Last Host Address Q39::
+An IP address 108.14.23.123 (01101100.00001110.00010111.01111011) has a subnet mask of /14. Which of the following is the LAST host address for this IP?
+{
+~108.255.255.254/14
+=108.15.255.254/14
+~108.63.255.254/14
+~108.127.255.254/14
+}
+
+::Find Last Host Address Q40::
+An IP address 129.112.35.97 (10000001.01110000.00100011.01100001) has a subnet mask of /11. Which of the following is the LAST host address for this IP?
+{
+~129.255.255.254/11
+~193.127.255.254/11
+~1.127.255.254/11
+=129.127.255.254/11
+}
+
+::Find Last Host Address Q41::
+An IP address 91.9.73.125 (01011011.00001001.01001001.01111101) has a subnet mask of /13. Which of the following is the LAST host address for this IP?
+{
+~91.63.255.254/13
+=91.15.255.254/13
+~91.255.255.254/13
+~91.127.255.254/13
+}
+
+::Find Last Host Address Q42::
+An IP address 72.219.38.140 (01001000.11011011.00100110.10001100) has a subnet mask of /12. Which of the following is the LAST host address for this IP?
+{
+=72.223.255.254/12
+~72.255.255.254/12
+~88.223.255.254/12
+~96.223.255.254/12
+}
+
+::Find Last Host Address Q43::
+An IP address 19.130.106.49 (00010011.10000010.01101010.00110001) has a subnet mask of /23. Which of the following is the LAST host address for this IP?
+{
+~19.130.111.254/23
+~19.130.127.254/23
+~19.138.107.254/23
+=19.130.107.254/23
+}
+
+::Find Last Host Address Q44::
+An IP address 129.132.83.37 (10000001.10000100.01010011.00100101) has a subnet mask of /26. Which of the following is the LAST host address for this IP?
+{
+~129.132.83.126/26
+~129.132.95.254/26
+=129.132.83.62/26
+~129.132.83.254/26
+}
+
+::Find Last Host Address Q45::
+An IP address 215.42.34.119 (11010111.00101010.00100010.01110111) has a subnet mask of /28. Which of the following is the LAST host address for this IP?
+{
+~215.42.38.126/28
+~215.42.34.254/28
+~215.42.35.254/28
+=215.42.34.126/28
+}
+
+::Find Last Host Address Q46::
+An IP address 14.149.15.125 (00001110.10010101.00001111.01111101) has a subnet mask of /22. Which of the following is the LAST host address for this IP?
+{
+=14.149.15.254/22
+~14.149.31.254/22
+~14.149.127.254/22
+~14.149.255.254/22
+}
+
+::Find Last Host Address Q47::
+An IP address 179.192.48.77 (10110011.11000000.00110000.01001101) has a subnet mask of /12. Which of the following is the LAST host address for this IP?
+{
+~183.143.255.254/12
+~179.255.255.254/12
+=179.207.255.254/12
+~179.223.255.254/12
+}
+
+::Find Last Host Address Q48::
+An IP address 15.236.73.205 (00001111.11101100.01001001.11001101) has a subnet mask of /27. Which of the following is the LAST host address for this IP?
+{
+~15.236.75.254/27
+~15.236.73.254/27
+=15.236.73.222/27
+~15.236.79.254/27
+}
+
+::Find Last Host Address Q49::
+An IP address 92.203.0.227 (01011100.11001011.00000000.11100011) has a subnet mask of /15. Which of the following is the LAST host address for this IP?
+{
+=92.203.255.254/15
+~92.223.255.254/15
+~92.255.255.254/15
+~92.207.255.254/15
+}
+
+::Find Last Host Address Q50::
+An IP address 144.64.231.70 (10010000.01000000.11100111.01000110) has a subnet mask of /17. Which of the following is the LAST host address for this IP?
+{
+~144.65.255.254/17
+=144.64.255.254/17
+~144.71.255.254/17
+~144.67.255.254/17
+}
+
+::Find Last Host Address Q51::
+An IP address 116.250.129.222 (01110100.11111010.10000001.11011110) has a subnet mask of /16. Which of the following is the LAST host address for this IP?
+{
+~120.250.255.254/16
+=116.250.255.254/16
+~116.251.255.254/16
+~116.255.255.254/16
+}
+
+::Find Last Host Address Q52::
+An IP address 94.126.234.104 (01011110.01111110.11101010.01101000) has a subnet mask of /14. Which of the following is the LAST host address for this IP?
+{
+~126.127.255.254/14
+~94.255.255.254/14
+=94.127.255.254/14
+~95.127.255.254/14
+}
+
+::Find Last Host Address Q53::
+An IP address 69.7.182.53 (01000101.00000111.10110110.00110101) has a subnet mask of /8. Which of the following is the LAST host address for this IP?
+{
+~101.255.255.254/8
+~5.255.255.254/8
+=69.255.255.254/8
+~197.255.255.254/8
+}
+
+::Find Last Host Address Q54::
+An IP address 108.253.242.86 (01101100.11111101.11110010.01010110) has a subnet mask of /18. Which of the following is the LAST host address for this IP?
+{
+=108.253.255.254/18
+~104.253.127.254/18
+~238.253.255.254/18
+~108.255.255.254/18
+}
+
+::Find Last Host Address Q55::
+An IP address 70.102.225.231 (01000110.01100110.11100001.11100111) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+~70.102.227.254/25
+~70.102.255.254/25
+=70.102.225.254/25
+~70.102.231.254/25
+}
+
+::Find Last Host Address Q56::
+An IP address 67.159.157.254 (01000011.10011111.10011101.11111110) has a subnet mask of /13. Which of the following is the LAST host address for this IP?
+{
+~67.191.255.254/13
+=67.159.255.254/13
+~67.255.255.254/13
+~83.159.255.254/13
+}
+
+::Find Last Host Address Q57::
+An IP address 161.219.237.126 (10100001.11011011.11101101.01111110) has a subnet mask of /21. Which of the following is the LAST host address for this IP?
+{
+~161.251.239.254/21
+~165.219.239.254/21
+~161.219.255.254/21
+=161.219.239.254/21
+}
+
+::Find Last Host Address Q58::
+An IP address 188.7.235.243 (10111100.00000111.11101011.11110011) has a subnet mask of /12. Which of the following is the LAST host address for this IP?
+{
+~188.31.255.254/12
+=188.15.255.254/12
+~188.63.255.254/12
+~188.255.255.254/12
+}
+
+::Find Last Host Address Q59::
+An IP address 36.36.129.127 (00100100.00100100.10000001.01111111) has a subnet mask of /14. Which of the following is the LAST host address for this IP?
+{
+~36.127.255.254/14
+~36.63.255.254/14
+~36.255.255.254/14
+=36.39.255.254/14
+}
+
+::Find Last Host Address Q60::
+An IP address 171.250.61.218 (10101011.11111010.00111101.11011010) has a subnet mask of /29. Which of the following is the LAST host address for this IP?
+{
+~171.250.61.254/29
+~171.250.61.158/29
+~171.250.189.214/29
+=171.250.61.222/29
+}
+
+::Find Last Host Address Q61::
+An IP address 85.15.204.214 (01010101.00001111.11001100.11010110) has a subnet mask of /15. Which of the following is the LAST host address for this IP?
+{
+=85.15.255.254/15
+~85.31.255.254/15
+~85.127.255.254/15
+~85.63.255.254/15
+}
+
+::Find Last Host Address Q62::
+An IP address 111.98.93.106 (01101111.01100010.01011101.01101010) has a subnet mask of /9. Which of the following is the LAST host address for this IP?
+{
+~108.127.255.254/9
+~111.255.255.254/9
+~95.127.255.254/9
+=111.127.255.254/9
+}
+
+::Find Last Host Address Q63::
+An IP address 143.162.20.27 (10001111.10100010.00010100.00011011) has a subnet mask of /20. Which of the following is the LAST host address for this IP?
+{
+=143.162.31.254/20
+~143.162.127.254/20
+~143.163.255.254/20
+~143.162.63.254/20
+}
+
+::Find Last Host Address Q64::
+An IP address 129.114.149.38 (10000001.01110010.10010101.00100110) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+=129.114.149.126/25
+~129.114.149.254/25
+~129.114.159.254/25
+~129.114.151.254/25
+}
+
+::Find Last Host Address Q65::
+An IP address 53.57.166.102 (00110101.00111001.10100110.01100110) has a subnet mask of /27. Which of the following is the LAST host address for this IP?
+{
+~53.57.166.254/27
+=53.57.166.126/27
+~53.59.166.126/27
+~53.57.167.254/27
+}
+
+::Find Last Host Address Q66::
+An IP address 154.247.73.94 (10011010.11110111.01001001.01011110) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+~154.247.95.254/25
+~154.247.79.254/25
+~154.247.73.254/25
+=154.247.73.126/25
+}
+
+::Find Last Host Address Q67::
+An IP address 191.163.224.116 (10111111.10100011.11100000.01110100) has a subnet mask of /29. Which of the following is the LAST host address for this IP?
+{
+~191.163.224.254/29
+~191.163.224.126/29
+~191.163.225.254/29
+=191.163.224.118/29
+}
+
+::Find Last Host Address Q68::
+An IP address 76.46.127.171 (01001100.00101110.01111111.10101011) has a subnet mask of /13. Which of the following is the LAST host address for this IP?
+{
+~76.255.255.254/13
+~76.127.255.254/13
+~76.63.255.254/13
+=76.47.255.254/13
+}
+
+::Find Last Host Address Q69::
+An IP address 136.72.226.147 (10001000.01001000.11100010.10010011) has a subnet mask of /9. Which of the following is the LAST host address for this IP?
+{
+~136.255.255.254/9
+~169.127.255.254/9
+=136.127.255.254/9
+~8.127.255.254/9
+}
+
+::Find Last Host Address Q70::
+An IP address 100.56.100.145 (01100100.00111000.01100100.10010001) has a subnet mask of /17. Which of the following is the LAST host address for this IP?
+{
+~100.59.255.254/17
+~100.56.255.254/17
+~100.57.255.254/17
+=100.56.127.254/17
+}
+
+::Find Last Host Address Q71::
+An IP address 175.147.105.84 (10101111.10010011.01101001.01010100) has a subnet mask of /14. Which of the following is the LAST host address for this IP?
+{
+~175.255.255.254/14
+~175.151.255.254/14
+~175.159.255.254/14
+=175.147.255.254/14
+}
+
+::Find Last Host Address Q72::
+An IP address 90.165.7.227 (01011010.10100101.00000111.11100011) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+~82.165.7.254/25
+~90.165.31.254/25
+~90.165.15.254/25
+=90.165.7.254/25
+}
+
+::Find Last Host Address Q73::
+An IP address 56.42.190.123 (00111000.00101010.10111110.01111011) has a subnet mask of /28. Which of the following is the LAST host address for this IP?
+{
+=56.42.190.126/28
+~56.42.191.254/28
+~56.42.188.126/28
+~56.42.190.254/28
+}
+
+::Find Last Host Address Q74::
+An IP address 195.13.118.64 (11000011.00001101.01110110.01000000) has a subnet mask of /10. Which of the following is the LAST host address for this IP?
+{
+~135.63.255.254/10
+~195.255.255.254/10
+~195.127.255.254/10
+=195.63.255.254/10
+}
+
+::Find Last Host Address Q75::
+An IP address 43.60.45.36 (00101011.00111100.00101101.00100100) has a subnet mask of /14. Which of the following is the LAST host address for this IP?
+{
+~41.31.255.254/14
+~43.255.255.254/14
+~43.127.255.254/14
+=43.63.255.254/14
+}
+
+::Find Last Host Address Q76::
+An IP address 165.165.108.23 (10100101.10100101.01101100.00010111) has a subnet mask of /8. Which of the following is the LAST host address for this IP?
+{
+=165.255.255.254/8
+~5.255.255.254/8
+~166.255.255.254/8
+~181.255.255.254/8
+}
+
+::Find Last Host Address Q77::
+An IP address 166.194.7.56 (10100110.11000010.00000111.00111000) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+~166.194.31.254/25
+~166.194.15.254/25
+~166.194.7.254/25
+=166.194.7.126/25
+}
+
+::Find Last Host Address Q78::
+An IP address 197.44.38.64 (11000101.00101100.00100110.01000000) has a subnet mask of /10. Which of the following is the LAST host address for this IP?
+{
+~197.255.255.254/10
+=197.63.255.254/10
+~197.127.255.254/10
+~205.63.255.254/10
+}
+
+::Find Last Host Address Q79::
+An IP address 175.205.164.101 (10101111.11001101.10100100.01100101) has a subnet mask of /22. Which of the following is the LAST host address for this IP?
+{
+~175.205.175.254/22
+=175.205.167.254/22
+~175.205.191.254/22
+~175.205.255.254/22
+}
+
+::Find Last Host Address Q80::
+An IP address 105.113.43.35 (01101001.01110001.00101011.00100011) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+~105.113.43.254/25
+=105.113.43.126/25
+~105.113.47.254/25
+~105.113.63.254/25
+}
+
+::Find Last Host Address Q81::
+An IP address 77.214.243.165 (01001101.11010110.11110011.10100101) has a subnet mask of /28. Which of the following is the LAST host address for this IP?
+{
+~77.214.243.190/28
+=77.214.243.174/28
+~13.214.115.174/28
+~77.214.243.254/28
+}
+
+::Find Last Host Address Q82::
+An IP address 171.179.81.11 (10101011.10110011.01010001.00001011) has a subnet mask of /25. Which of the following is the LAST host address for this IP?
+{
+~171.179.95.254/25
+=171.179.81.126/25
+~171.179.81.254/25
+~171.179.83.254/25
+}
+
+::Find Last Host Address Q83::
+An IP address 149.72.92.24 (10010101.01001000.01011100.00011000) has a subnet mask of /11. Which of the following is the LAST host address for this IP?
+{
+=149.95.255.254/11
+~149.255.255.254/11
+~149.127.255.254/11
+~157.31.255.254/11
+}
+
+::Find Last Host Address Q84::
+An IP address 49.27.235.149 (00110001.00011011.11101011.10010101) has a subnet mask of /20. Which of the following is the LAST host address for this IP?
+{
+~49.27.255.254/20
+~113.27.239.254/20
+~49.31.111.254/20
+=49.27.239.254/20
+}
+
+::Find Last Host Address Q85::
+An IP address 136.122.47.150 (10001000.01111010.00101111.10010110) has a subnet mask of /21. Which of the following is the LAST host address for this IP?
+{
+~136.122.127.254/21
+=136.122.47.254/21
+~136.123.255.254/21
+~136.122.255.254/21
+}
+
+::Find Last Host Address Q86::
+An IP address 166.144.3.88 (10100110.10010000.00000011.01011000) has a subnet mask of /20. Which of the following is the LAST host address for this IP?
+{
+~166.144.63.254/20
+~166.144.127.254/20
+=166.144.15.254/20
+~166.144.255.254/20
+}
+
+::Find Last Host Address Q87::
+An IP address 194.219.169.203 (11000010.11011011.10101001.11001011) has a subnet mask of /29. Which of the following is the LAST host address for this IP?
+{
+=194.219.169.206/29
+~194.219.169.254/29
+~194.219.169.198/29
+~194.219.169.222/29
+}
+
+::Find Last Host Address Q88::
+An IP address 13.113.211.128 (00001101.01110001.11010011.10000000) has a subnet mask of /21. Which of the following is the LAST host address for this IP?
+{
+~13.113.223.254/21
+=13.113.215.254/21
+~77.113.151.254/21
+~13.113.255.254/21
+}
+
+::Find Last Host Address Q89::
+An IP address 103.242.69.74 (01100111.11110010.01000101.01001010) has a subnet mask of /10. Which of the following is the LAST host address for this IP?
+{
+~69.255.255.254/10
+~115.255.255.254/10
+=103.255.255.254/10
+~111.255.255.254/10
+}
+
+::Find Last Host Address Q90::
+An IP address 112.139.202.243 (01110000.10001011.11001010.11110011) has a subnet mask of /26. Which of the following is the LAST host address for this IP?
+{
+=112.139.202.254/26
+~96.139.202.254/26
+~112.139.207.254/26
+~112.139.203.254/26
+}
+
+::Find Last Host Address Q91::
+An IP address 121.57.235.175 (01111001.00111001.11101011.10101111) has a subnet mask of /18. Which of the following is the LAST host address for this IP?
+{
+~125.56.255.254/18
+=121.57.255.254/18
+~121.63.255.254/18
+~121.59.255.254/18
+}
+
+::Find Last Host Address Q92::
+An IP address 66.239.106.75 (01000010.11101111.01101010.01001011) has a subnet mask of /23. Which of the following is the LAST host address for this IP?
+{
+~66.239.127.254/23
+~66.239.111.254/23
+=66.239.107.254/23
+~67.239.235.254/23
+}
+
+::Find Last Host Address Q93::
+An IP address 6.2.35.23 (00000110.00000010.00100011.00010111) has a subnet mask of /16. Which of the following is the LAST host address for this IP?
+{
+=6.2.255.254/16
+~6.63.255.254/16
+~6.31.255.254/16
+~6.15.255.254/16
+}
+
+::Find Last Host Address Q94::
+An IP address 68.133.148.153 (01000100.10000101.10010100.10011001) has a subnet mask of /29. Which of the following is the LAST host address for this IP?
+{
+~68.133.148.254/29
+~68.133.149.254/29
+~68.133.148.190/29
+=68.133.148.158/29
+}
+
+::Find Last Host Address Q95::
+An IP address 134.164.34.71 (10000110.10100100.00100010.01000111) has a subnet mask of /14. Which of the following is the LAST host address for this IP?
+{
+~134.255.255.254/14
+=134.167.255.254/14
+~134.175.255.254/14
+~134.191.255.254/14
+}
+
+::Find Last Host Address Q96::
+An IP address 113.53.244.190 (01110001.00110101.11110100.10111110) has a subnet mask of /17. Which of the following is the LAST host address for this IP?
+{
+=113.53.255.254/17
+~113.55.255.254/17
+~112.49.255.254/17
+~113.63.255.254/17
+}
+
+::Find Last Host Address Q97::
+An IP address 218.251.164.198 (11011010.11111011.10100100.11000110) has a subnet mask of /27. Which of the following is the LAST host address for this IP?
+{
+~218.251.164.254/27
+=218.251.164.222/27
+~218.251.165.254/27
+~218.251.167.254/27
+}
+
+::Find Last Host Address Q98::
+An IP address 185.247.98.191 (10111001.11110111.01100010.10111111) has a subnet mask of /8. Which of the following is the LAST host address for this IP?
+{
+~153.255.255.254/8
+~121.255.255.254/8
+~57.255.255.254/8
+=185.255.255.254/8
+}
+
+::Find Last Host Address Q99::
+An IP address 49.16.162.109 (00110001.00010000.10100010.01101101) has a subnet mask of /17. Which of the following is the LAST host address for this IP?
+{
+~49.31.255.254/17
+~49.23.255.254/17
+=49.16.255.254/17
+~49.17.255.254/17
+}
+
+::Find Last Host Address Q100::
+An IP address 13.113.183.151 (00001101.01110001.10110111.10010111) has a subnet mask of /21. Which of the following is the LAST host address for this IP?
+{
+=13.113.183.254/21
+~13.113.191.254/21
+~9.241.183.254/21
+~13.113.255.254/21
+}
+
