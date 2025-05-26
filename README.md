@@ -5,16 +5,30 @@ This repository contains Python scripts that auto-generate IP networking multipl
 
 ##  Project Structure
 
-├── Output/
-│   ├── Find_Broadcast_Address.txt         # Output file: Broadcast address questions
-│   ├── Find_First_Host_Address.txt        # Output file: First host address questions
-│   ├── Find_Last_Host_Address.txt         # Output file: Last host address questions
-│   └── Find_Network_Address.txt           # Output file: Network address questions
-├── Scripts/
-│   ├── Find Broadcast Address.py          # Script to generate broadcast address
-│   ├── Find First Host Address.py         # Script to generate first host address
-│   ├── Find Last Host Address.py          # Script to generate last host address
-│   └── Find Network Address.py            # Script to generate network address 
+Output/
+├── Find_Broadcast_Address.txt
+├── Find_First_Host_Address.txt
+├── Find_Last_Host_Address.txt
+└── Find_Network_Address.txt
+
+Scripts/
+├── Find Broadcast Address.py
+├── Find First Host Address.py
+├── Find Last Host Address.py
+└── Find Network Address.py
+
+###  File Descriptions
+
+| File Name                        | Description                               |
+|----------------------------------|-------------------------------------------|
+| `Find_Broadcast_Address.txt`     | Output file: Broadcast address questions  |
+| `Find_First_Host_Address.txt`    | Output file: First host address questions |
+| `Find_Last_Host_Address.txt`     | Output file: Last host address questions  |
+| `Find_Network_Address.txt`       | Output file: Network address questions    |
+| `Find Broadcast Address.py`      | Script to generate broadcast address      |
+| `Find First Host Address.py`     | Script to generate first host address     |
+| `Find Last Host Address.py`      | Script to generate last host address      |
+| `Find Network Address.py`        | Script to generate network address        |
 
 
 ##  Script Purpose
