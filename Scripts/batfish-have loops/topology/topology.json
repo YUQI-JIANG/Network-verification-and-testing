@@ -1,0 +1,22 @@
+{
+  "links": [
+    {
+      "nodes": [
+        { "hostname": "ha", "interface": "Ethernet0" },
+        { "hostname": "r1", "interface": "Ethernet0" }
+      ]
+    },
+    {
+      "nodes": [
+        { "hostname": "r1", "interface": "Ethernet1" },
+        { "hostname": "r2", "interface": "Ethernet0" }
+      ]
+    },
+    {
+      "nodes": [
+        { "hostname": "r2", "interface": "Ethernet1" },
+        { "hostname": "hb", "interface": "Ethernet0" }
+      ]
+    }
+  ]
+}
