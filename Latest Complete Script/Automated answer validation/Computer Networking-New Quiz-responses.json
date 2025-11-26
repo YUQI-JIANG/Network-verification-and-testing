@@ -1,0 +1,12 @@
+[[{
+    "lastname": "User",
+    "firstname": "Admin",
+    "emailaddress": "user@example.com",
+    "status": "Finished",
+    "started": "25 November 2025  3:08 AM",
+    "completed": "25 November 2025  3:09 AM",
+    "duration": "1 min 20 secs",
+    "grade1000": "Not yet graded",
+    "question1": "ID: Q043_3763      Based on the topology below, calculate the COMPLETE ROUTING TABLE for HA, R, and HB.      Use the format: NETWORK PREFIX | GATEWAY | INTERFACE.      [topology]      SUBNETS:      \t* neta : 172.27.191.0\/24   \t* netb : 172.24.138.0\/24      IP ASSIGNMENTS:      \t* ha-eth0 : 172.27.191.6\/24   \t* r1-eth0 : 172.27.191.2\/24   \t* r1-eth1 : 172.24.138.11\/24   \t* hb-eth0 : 172.24.138.6\/24      ANSWER GUIDELINES:      \t* Write ONE ROUTE PER ROW, with no extra text. You can leave unused rows BLANK.   \t* Please fill EACH DEVICE in its own routing table: [HA], [R1], [HB].   \t* Use 0.0.0.0\/0 for default network prefix.   \t* Use * for directly connected networks.   \t* Use ETHX for interface.",
+    "response1": "[H1] ROUTING TABLE      \t\tRULE   \t\tNETWORK PREFIX   \t\tGATEWAY   \t\tINTERFACE      \t\t1   \t\t172.27.191.0\/24   \t\t*   \t\teth0      \t\t2   \t\t0.0.0.0\/0   \t\t172.27.191.2   \t\teth0      \t\t3   \t\t    \t\t    \t\t       \t\t4   \t\t    \t\t    \t\t       \t\t5   \t\t    \t\t    \t\t       [R] ROUTING TABLE      \t\tRULE   \t\tNETWORK PREFIX   \t\tGATEWAY   \t\tINTERFACE      \t\t1   \t\t172.27.191.0\/24   \t\t*   \t\teth0      \t\t2   \t\t172.24.138.0\/24   \t\t*   \t\teth1      \t\t3   \t\t    \t\t    \t\t       \t\t4   \t\t    \t\t    \t\t       \t\t5   \t\t    \t\t    \t\t       [H2] ROUTING TABLE      \t\tRULE   \t\tNETWORK PREFIX   \t\tGATEWAY   \t\tINTERFACE      \t\t1   \t\t172.24.138.0\/24   \t\t*   \t\teth0      \t\t2   \t\t0.0.0.0\/0   \t\t172.24.138.11   \t\teth0      \t\t3   \t\t    \t\t    \t\t       \t\t4   \t\t    \t\t    \t\t       \t\t5   \t\t    \t\t    \t\t "
+}]]
