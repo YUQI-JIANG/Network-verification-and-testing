@@ -1,0 +1,4 @@
+email,lastname,firstname,qid,grade,reachability index,loop index,snapshot_time_s,batfish_time_s,total_time_s
+user@example.com,User,Admin,SINGLE_061,10,1,1,0.002154,4.992903,4.99549
+user@example.com,User,Admin,LINEAR_080,10,1,1,0.002233,6.760153,6.762718
+user@example.com,User,Admin,LOOP_042,0,0.916666667,1,0.005938,12.72701,12.733223
