@@ -1,4 +1,4 @@
-# Automated Verification and Evaluation of Routing Configurations
+# Automated Verification and Evaluation of Network Routing Configurations
 
 This repository contains the implementation and selected artifacts for a thesis project on **automated verification and grading of routing configurations** using **Batfish-based data-plane analysis**.
 
