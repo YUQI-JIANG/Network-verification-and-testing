@@ -12,14 +12,16 @@ import shutil
 import csv
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
+import time
 
 BASE = Path(__file__).resolve().parent
 
-STU_JSON = BASE / "Computer Networking-New Quiz-responses.json"
-META_JSON = BASE / "routing_questions_20251010_152345.json"
+STU_JSON = BASE / "Computer_Networking_Quiz_Responses.json"
+META_JSON = BASE / "routing_questions_meta.json"
 VERIFY = BASE / "Batfish_automated_verification.py"
 SNAP_ROOT = BASE / "student_snapshots"
 CSV_OUT = BASE / "grading_results.csv"
+CSV_OUT_TOTAL = BASE / "moodle_import_total.csv"
 
 # Basic utility functions
 def split_ip_mask(cidr: str):
@@ -55,24 +57,26 @@ def find_question_response_pairs(attempt: Dict[str, Any]):
 
 def extract_qid(text: str) -> str:
     """Extract QID from question text."""
-    m = re.search(r"ID:\s*(Q[0-9_]+)", text)
+    m = re.search(r"\bID:\s*([A-Za-z]+_\d+)\b", text)
     if not m:
-        raise ValueError("Missing QID in question text")
+        raise ValueError("Missing or invalid ID")
     return m.group(1)
 
 def parse_rtable(raw: str) -> Dict[str, List[Dict[str, str]]]:
     """Parse student's routing table into route dict"""
     raw = raw.replace("\xa0", " ")
     raw = re.sub(r"[\u2000-\u200B\u202F\u205F]", " ", raw)
-
+    raw = re.sub(r"\s+(\[[A-Za-z0-9_]+\]\s*ROUTING TABLE)", r"\t\t\1", raw)
+    
     fields = [f.strip() for f in raw.split("\t\t") if f.strip()]
     routes = {}
     dev = None
     buf = []
 
     for f in fields:
-        if f.startswith("[") and "ROUTING TABLE" in f:
-            dev = f[1:f.index("]")]
+        m = re.match(r"^\[([A-Za-z0-9_]+)\]", f)
+        if m:
+            dev = m.group(1)
             routes[dev] = []
             buf = []
             continue
@@ -80,7 +84,7 @@ def parse_rtable(raw: str) -> Dict[str, List[Dict[str, str]]]:
         buf.append(f)
         if len(buf) == 4:
             _, prefix, gw, iface = buf
-            if prefix and "/" in prefix:
+            if dev is not None and prefix and "/" in prefix:
                 routes[dev].append({"prefix": prefix, "gw": gw, "iface": iface})
             buf = []
     return routes
@@ -151,17 +155,27 @@ def generate_snapshot(meta: Dict[str, Any],
     (topo / "topology.json").write_text(json.dumps({"links": links}, indent=2), encoding="utf-8")
 
 # Run Batfish-Verify.py
-def run_verify(snapshot_dir: Path, qid: str, lastname: str, firstname: str, email: str):
+def run_verify(snapshot_dir: Path, qid: str, lastname: str, firstname: str, email: str) -> float:
+    """Run Batfish verification script and return elapsed time in seconds."""
+    t0 = time.perf_counter()
+
     result = subprocess.run(
-        ["python", str(VERIFY),
-         str(snapshot_dir), qid, lastname, firstname, email],
+        ["python", str(VERIFY), str(snapshot_dir), qid, lastname, firstname, email],
         cwd=str(BASE),
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         encoding="utf-8",
         errors="replace"
     )
+
+    t1 = time.perf_counter()
+
+    # keep your existing behavior
     print(result.stdout)
+    if result.returncode != 0:
+        print("VERIFY STDERR:", result.stderr)
+
+    return t1 - t0
 
 # MAIN
 def main():
@@ -172,15 +186,23 @@ def main():
     SNAP_ROOT.mkdir(exist_ok=True)
 
     all_data = json.loads(STU_JSON.read_text(encoding="utf-8"))
-    meta_dict = {q["qid"]: q for q in json.loads(META_JSON.read_text(encoding="utf-8"))}
+    meta_raw = json.loads(META_JSON.read_text(encoding="utf-8"))
+
+    if isinstance(meta_raw, dict):
+        meta_dict = meta_raw
+    else:
+        meta_dict = {q["qid"]: q for q in meta_raw}
 
     header = ["email", "lastname", "firstname", "qid", "grade",
-              "reachability index", "loop index"]
+              "reachability index", "loop index",
+              "snapshot_time_s", "batfish_time_s", "total_time_s"]
+    
+    total_by_email = {}
 
     with CSV_OUT.open("w", newline="", encoding="utf-8") as fcsv:
         w = csv.writer(fcsv)
         w.writerow(header)
-
+    
         for stu_block in all_data:
             if isinstance(stu_block, list):
                 attempt = stu_block[0]
@@ -189,9 +211,10 @@ def main():
 
             lastname = attempt.get("lastname", "NA")
             firstname = attempt.get("firstname", "NA")
-            email = attempt.get("emailaddress", "NA").replace(" ", "_").replace("@", "_at_")
+            email_raw = attempt.get("emailaddress", "NA").strip()
+            email_safe = email_raw.replace(" ", "_").replace("@", "_at_")
 
-            stu_dir = SNAP_ROOT / f"{lastname}_{firstname}_{email}"
+            stu_dir = SNAP_ROOT / f"{lastname}_{firstname}_{email_safe}"
             stu_dir.mkdir(exist_ok=True)
 
             pairs = find_question_response_pairs(attempt)
@@ -202,12 +225,23 @@ def main():
                 routes = parse_rtable(rtext)
 
                 qdir = stu_dir / qid
+                
+                t_total0 = time.perf_counter()
+                t_snap0 = time.perf_counter()
                 generate_snapshot(meta, routes, qdir)
+                snapshot_time = time.perf_counter() - t_snap0
 
-                run_verify(qdir, qid, lastname, firstname, email)
+                verify_time = run_verify(qdir, qid, lastname, firstname, email_raw)
+                batfish_time = verify_time
 
+                total_time = time.perf_counter() - t_total0
                 # read grade.json
+                grade_path = qdir / "grade.json"
                 grade_obj = json.loads((qdir / "grade.json").read_text("utf-8"))
+                grade_obj["Snapshot generation time (s)"] = snapshot_time
+                grade_obj["Batfish verification time (s)"] = batfish_time
+                grade_obj["Total grading time (s)"] = total_time
+                grade_path.write_text(json.dumps(grade_obj, indent=2), encoding="utf-8")
                 w.writerow([
                     grade_obj["email"],
                     grade_obj["lastname"],
@@ -215,11 +249,25 @@ def main():
                     grade_obj["qid"],
                     grade_obj["Grade"],
                     grade_obj["Reachability index"],
-                    grade_obj["Loop index"]
+                    grade_obj["Loop index"],
+                    f"{snapshot_time:.6f}",
+                    f"{batfish_time:.6f}",
+                    f"{total_time:.6f}",
                 ])
+                g = float(grade_obj["Grade"])
+                total_by_email[email_raw] = total_by_email.get(email_raw, 0.0) + g
+    
+    CSV_OUT_TOTAL = BASE / "moodle_import_total.csv"
 
-    print("=== Automated Grading Complete! ===")
-    print(f"Students' Results Saved → {CSV_OUT}")
+    with CSV_OUT_TOTAL.open("w", newline="", encoding="utf-8") as f2:
+        w2 = csv.writer(f2)
+        w2.writerow(["email", "grade"])
+        for email_raw, total in sorted(total_by_email.items()):
+            w2.writerow([email_raw, total])
+
+    print("==== Automated Grading Complete! ====")
+    print(f"All Students' Results Saved → {CSV_OUT}")
+    print(f"Moodle Import CSV Saved → {CSV_OUT_TOTAL}")
 
 if __name__ == "__main__":
     main()
