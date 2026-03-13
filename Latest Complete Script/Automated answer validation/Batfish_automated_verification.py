@@ -66,7 +66,7 @@ def main():
 
     # Step 1: List nodes
     SRC_NODES = cfg_files_nodes(str(configs_path))
-    log("\nNodes to be graded:")
+    log("\nEvaluation Nodes:")
     for n in SRC_NODES:
         log(f" • {n}")
 
@@ -76,7 +76,7 @@ def main():
         bag_net.update(connected_prefixes(n))
     bag_net = sorted(bag_net)
 
-    log("\nBAG_NET (all directly-connected prefixes):")
+    log("\nDestination Prefix Set (BAG-NET):")
     for p in bag_net:
         log(f" • {p}")
 
@@ -100,24 +100,40 @@ def main():
     log(f"\nReachability index = {passed_tests}/{total_tests} = {reach_index:.2f}")
 
     # Step 4: Loop check
-    log("\n========== Loop Check ===========")
+    log("\n=========== Loop Check ============")
     loop_df = bfq.detectLoops().answer().frame()
 
-    loop_index = 1 if loop_df.empty else 0
-    if loop_index:
-        log("No loops found")
-    else:
-        log(loop_df)
+    loop_found = False
 
+    if loop_df.empty:
+        log("No loops found (global):")
+    else:  
+        for _, row in loop_df.iterrows():
+            flow_str = str(row["Flow"])
+
+            for prefix in bag_net:
+                if prefix.split("/")[0] in flow_str:
+                    log(f"Loop related to test prefix {prefix}")
+                    log(row)
+                    loop_found = True
+                    break
+
+            if loop_found:
+                break
+        
+        if not loop_df.empty and not loop_found:
+            log("Global loops detected, but none is relevant to the destination prefix set (BAG-NET).")
+
+    loop_index = 0 if loop_found else 1
     log(f"\nLoop index = {loop_index}")
 
     # Step 5: Grade
     if reach_index < 1.0:
         grade = 0
     else:
-        grade = 100 if loop_index == 1 else 50
+        grade = 10 if loop_index == 1 else 5
 
-    log("\n========== Final Grade ==========")
+    log("\n=========== Final Grade ============")
     log(f"Grade = {grade}")
 
     # Write outputs
