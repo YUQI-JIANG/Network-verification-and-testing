@@ -1,0 +1,12 @@
+{
+  "qid": "SINGLE_061",
+  "lastname": "User",
+  "firstname": "Admin",
+  "email": "user@example.com",
+  "Reachability index": 1.0,
+  "Loop index": 1,
+  "Grade": 10,
+  "Snapshot generation time (s)": 0.00215369975194335,
+  "Batfish verification time (s)": 4.9929033000953496,
+  "Total grading time (s)": 4.995490199886262
+}

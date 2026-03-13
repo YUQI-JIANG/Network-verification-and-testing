@@ -1,0 +1,12 @@
+{
+  "qid": "LOOP_042",
+  "lastname": "User",
+  "firstname": "Admin",
+  "email": "user@example.com",
+  "Reachability index": 0.9166666666666666,
+  "Loop index": 1,
+  "Grade": 0,
+  "Snapshot generation time (s)": 0.00593779981136322,
+  "Batfish verification time (s)": 12.727010300382972,
+  "Total grading time (s)": 12.733223400078714
+}

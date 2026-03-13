@@ -1,0 +1,12 @@
+{
+  "qid": "LINEAR_080",
+  "lastname": "User",
+  "firstname": "Admin",
+  "email": "user@example.com",
+  "Reachability index": 1.0,
+  "Loop index": 1,
+  "Grade": 10,
+  "Snapshot generation time (s)": 0.00223349966108799,
+  "Batfish verification time (s)": 6.760152900125831,
+  "Total grading time (s)": 6.762717599980533
+}

@@ -1,0 +1,35 @@
+
+Evaluation Nodes:
+ • HA
+ • HB
+ • R1
+ • R2
+
+Destination Prefix Set (BAG-NET):
+ • 172.22.50.0/24
+ • 172.26.204.0/24
+ • 192.168.61.108/30
+
+========= Reachability Check ==========
+      HA ➜ 172.22.50.0/24     Reachable
+      HA ➜ 172.26.204.0/24    Reachable
+      HA ➜ 192.168.61.108/30  Reachable
+      HB ➜ 172.22.50.0/24     Reachable
+      HB ➜ 172.26.204.0/24    Reachable
+      HB ➜ 192.168.61.108/30  Reachable
+      R1 ➜ 172.22.50.0/24     Reachable
+      R1 ➜ 172.26.204.0/24    Reachable
+      R1 ➜ 192.168.61.108/30  Reachable
+      R2 ➜ 172.22.50.0/24     Reachable
+      R2 ➜ 172.26.204.0/24    Reachable
+      R2 ➜ 192.168.61.108/30  Reachable
+
+Reachability index = 12/12 = 1.00
+
+=========== Loop Check ============
+Global loops detected, but none is relevant to the destination prefix set (BAG-NET).
+
+Loop index = 1
+
+=========== Final Grade ============
+Grade = 10
