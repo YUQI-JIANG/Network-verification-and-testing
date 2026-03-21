@@ -86,7 +86,7 @@ Make sure these files are placed in the expected input folders.
 Run the script responsible for question generation:
 
 ```bash
-python <script_name>.py
+
 ```
 This step generates the routing questions and the corresponding metadata needed for later verification.
 
