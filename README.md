@@ -50,23 +50,50 @@ Network-verification-and-testing
 └── README.md
 ```
 
-## Workflow
+## Workflow Overview
 
-1. The framework follows this end-to-end workflow:
+The framework follows this end-to-end workflow:
 
-2. Generate routing questions and metadata.
+1. Generate routing questions and metadata.
 
-3. Export Moodle-compatible XML quiz files.
+2. Export Moodle-compatible XML quiz files.
 
-4. Collect student routing answers.
+3. Collect student routing answers.
 
-5. Parse answers and synthesize complete Batfish snapshots.
+4. Parse answers and synthesize complete Batfish snapshots.
 
-6. Run Batfish verification queries on the data plane.
+5. Run Batfish verification queries on the data plane.
 
-7. Compute deterministic grading results.
+6. Compute deterministic grading results.
 
-8. Export structured outputs and CSV files for Moodle import.
+7. Export structured outputs and CSV files for Moodle import.
+
+## Step-by-Step Execution Guide
+
+This section explains how to run the framework from start to finish.
+
+### Step 1 — Prepare the input data
+Before running the framework, prepare the following inputs:
+
+- routing question definitions
+- topology metadata
+- target prefix sets
+- student answer files
+
+Make sure these files are placed in the expected input folders.
+
+### Step 2 — Generate routing questions
+Run the script responsible for question generation:
+
+```bash
+python <script_name>.py
+```
+This step generates the routing questions and the corresponding metadata needed for later verification.
+
+
+
+
+
 
 ## Core Verification Logic
 
