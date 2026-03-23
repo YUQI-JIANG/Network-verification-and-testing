@@ -50,6 +50,19 @@ Network-verification-and-testing
 └── README.md
 ```
 
+## Prerequisites
+Before running the framework, make sure the following tools are available:
+- Python 3
+- Batfish
+- Docker (if Batfish is run through a Docker container)
+- Standard Python libraries required by the scripts
+- Access to a Moodle instance if you want to test the full Moodle-based workflow
+
+## Recommended Environment
+- A local machine with Python installed
+- Docker running successfully
+- Batfish service available before answer validation starts
+
 ## Workflow Overview
 
 The framework follows this end-to-end workflow:
@@ -72,28 +85,134 @@ The framework follows this end-to-end workflow:
 
 This section explains how to run the framework from start to finish.
 
-### Step 1 — Prepare the input data
-Before running the framework, prepare the following inputs:
+### Part A — Generate routing questions
 
-- routing question definitions
-- topology metadata
-- target prefix sets
-- student answer files
+#### Step 1 — Go to the Automated question generation folder
+Navigate to:
+```bash
+Latest Complete Script/Automated question generation/
+```
+This folder contains:
 
-Make sure these files are placed in the expected input folders.
+- moodle_xml_questions_generator.py
+- Topology images used in the generated questions
 
-### Step 2 — Generate routing questions
-Run the script responsible for question generation:
+#### Step 2 — Run the question generation script
+Run:
 
 ```bash
-
+python moodle_xml_questions_generator.py
 ```
-This step generates the routing questions and the corresponding metadata needed for later verification.
+This step generates quiz artifacts for Moodle import.
 
+#### Step 3 — Check the generated outputs
+You should find:
+- routing_questions.xml
+  
+Moodle-compatible quiz file.
+- routing_questions_meta.json
 
+Metadata describing the generated routing questions.
 
+#### Step 4 — Import the generated XML into Moodle
+Use the generated routing_questions.xml file to import the quiz into Moodle.
 
+At this point:
+- students can view the generated routing questions
+- the corresponding metadata file will later be used during answer validation
 
+### Part B — Collect student answers
+#### Step 5 — Export student responses from Moodle
+After students complete the quiz, export the quiz responses from Moodle.
+
+From your repository structure, the validation pipeline expects a JSON file such as:
+```bash
+Computer_Networking_Quiz_Responses.json
+```
+Place the exported response file in:
+```bash
+Latest Complete Script/Automated answer validation/
+```
+#### Step 6 — Make sure question metadata is available
+The answer validation pipeline also needs the routing question metadata:
+```bash
+routing_questions_meta.json
+```
+Make sure the correct metadata file is available in:
+```bash
+Latest Complete Script/Automated answer validation/
+```
+This metadata should match the generated questions that students answered.
+
+### Part C — Run automated answer validation
+#### Step 7 — Go to the automated answer validation folder
+Navigate to:
+```bash
+Latest Complete Script/Automated answer validation/
+```
+This folder contains:
+- MAIN.py
+- Batfish_automated_verification.py
+- Computer_Networking_Quiz_Responses.json
+- routing_questions_meta.json
+
+#### Step 8 — Make sure Batfish is available
+Before running the validation pipeline, make sure Batfish is ready.
+
+If your setup uses Docker, start the Batfish-related container or service first.
+
+#### Step 9 — Run the main grading pipeline
+Run:
+```bash
+python MAIN.py
+```
+This is the main entry point for:
+
+- parsing student answers
+- constructing snapshots
+- launching Batfish verification
+- computing grading outputs
+- exporting result files
+
+## Output files produced during answer validation
+After execution, inspect:
+```bash
+Output/Automated answer validation output/
+```
+### Main Outputs
+- student_snapshots/
+
+Contains per-student and per-question reconstructed snapshots.
+- grading_results.csv
+  
+Summary grading file.
+- moodle_import_total.csv
+  
+CSV prepared for Moodle-compatible grading import.
+
+### Inside each per-question snapshot directory
+For example:
+```bash
+student_snapshots/<student_identifier>/<question_id>/
+```
+You may find:
+- configs/
+  
+Device configuration files generated for the snapshot.
+- topology/
+  
+Topology description for the reconstructed scenario.
+- grade.json
+  
+Structured grading result for that question.
+- raw_output.txt
+  
+Raw verification output produced during analysis.
+
+These files are useful for:
+- debugging
+- validation traceability
+- explaining why a grade was assigned
 
 ## Core Verification Logic
 
@@ -101,7 +220,7 @@ The framework evaluates behavioral correctness, not textual similarity.
 
 The main verified properties are:
 
-Reachability: whether required destination prefixes are reachable from designated source nodes;
+Reachability: whether required destination prefixes are reachable from designated source nodes.
 
 Loop safety: whether forwarding loops affect the tested destination-prefix set.
 
@@ -125,35 +244,21 @@ student_snapshots/
 
 These artifacts support traceability and reproducibility:
 
-1. configs/ and topology/ define the Batfish snapshot;
+1. configs/ and topology/ define the Batfish snapshot.
 
-2. raw_output.txt stores intermediate verification results;
+2. raw_output.txt stores intermediate verification results.
 
 3. grade.json stores structured grading results.
-
-## Main Outputs
-
-The repository includes example outputs such as:
-
-1. routing_questions.xml – Moodle compatible question export
-
-2. routing_questions_meta.json – structured topology and question metadata
-
-3. grading_results.csv – grading results across question instances
-
-4. moodle_import_total.csv – CSV export for Moodle grade import
-
-5. grade.json – structured result for a single question instance
-
+   
 ## Moodle Integration
 
 This repository includes a proof-of-concept integration into a Moodle-based teaching workflow:
 
-Questions are exported as Moodle-compatible XML;
+- Questions are exported as Moodle-compatible XML
 
-Student answers are processed automatically;
+- Student answers are processed automatically
 
-Final grades are exported as CSV for Moodle import.
+- Final grades are exported as CSV for Moodle import
 
 ## Thesis Context
 
@@ -161,27 +266,27 @@ This repository accompanies a thesis on automated verification and evaluation of
 
 The main contribution is a behavior-based grading methodology built around:
 
-Snapshot synthesis;
+- Snapshot synthesis
 
-Batfish-based data-plane verification;
+- Batfish-based data-plane verification
 
-Scoped reachability and loop checks;
+- Scoped reachability and loop checks
 
-Deterministic mapping from verification outcomes to grading results.
+- Deterministic mapping from verification outcomes to grading results
 
 ## Reproducibility
 
 To support reproducibility, this repository provides:
 
-Implementation code;
+- Implementation code
 
-Generated question artifacts;
+- Generated question artifacts
 
-Metadata;
+- Metadata
 
-Per-question snapshot artifacts;
+- Per-question snapshot artifacts
 
-Structured verification and grading outputs.
+- Structured verification and grading outputs
 
 ## License
 
